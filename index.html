@@ -48,9 +48,26 @@
         }
         
         input {
-            border-radius: 4px;
-            height: 20px;
-            padding-bottom: 5px;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            border-bottom: 1px solid black;
+            padding-bottom:5px;
+        }
+        input:focus{
+             border-bottom: 2px solid black;
+        }
+        #but {
+            background-color:#1A1A1A;
+            color: white;
+            width: 25%;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            border:none;
+            border-radius:1px;
+            font-weight: bold;
+            font-size: .8em;
+            letter-spacing: 2px;
         }
     </style>
     <script type="text/javascript">
@@ -62,11 +79,8 @@
             $("#paypal").val(paypal);
             des = list - com - paypal;
             $("#des").val(des);
-        }#
-        ad {
-            z - index: 15;
-            background - color: blue;
         }
+        
     </script>
 </head>
 
@@ -79,8 +93,8 @@
     </div>
     <br>
     <div id="inputs">
-        <br>List Price: <input type="number" id="list"><br><br> Grailed Commision: <input type="number" id="com" disabled><br><br> Paypal Fees: <input type="number" id="paypal" disabled><br><br>
-        <button onclick="calc();">Calculate List Price</button><br><br> Amount(USD): <input type="number" id="des">
+        <br>List Price: <input type="number" id="list"><br><br><button onclick="calc();" id="but">Calculate Fees</button><br><br>  Grailed Commision: <input type="number" id="com" disabled><br><br> Paypal Fees: <input type="number" id="paypal" disabled><br><br>
+        Amount Paid: <input type="number" id="des" disabled>
     </div>
 
     <div id="ad">
